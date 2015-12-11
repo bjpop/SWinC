@@ -4,13 +4,11 @@ SRC = swinc.c
 EXE = swinc
 EXE_DEBUG = swinc_debug
 
-main: $(SRC)
+$(EXE): $(SRC)
 	$(CC) $(CFLAGS) -O2 -o $(EXE) $(SRC)
 
-
-debug: $(SRC)
+$(EXE_DEBUG): $(SRC)
 	$(CC) $(CFLAGS) -g -o $(EXE_DEBUG) $(SRC)
-
 
 clean:
 	/bin/rm -fr $(EXE) $(EXE_DEBUG)
